@@ -1,7 +1,10 @@
 package com.example.to_doappusingkotlinandroomdatabase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.room.Room
 import com.example.to_doappusingkotlinandroomdatabase.database.NoteDatabase
 import com.example.to_doappusingkotlinandroomdatabase.databinding.ActivitySplashScreenBinding
@@ -22,6 +25,11 @@ class SplashScreenActivity : AppCompatActivity() {
                 .build()
         GlobalScope.launch {
             DataObject.listdata = myDatabase.dbDao().getAllTask() as MutableList<CardInfo>
+
         }
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+            finish()
+        }, 3000)
     }
 }
