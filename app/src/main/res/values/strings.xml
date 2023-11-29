@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TO-DO APP USING KOTLIN AND ROOMDATABASE</string>
+    <string name="delete_from_to_do_note">Delete from TO-DO-NOTE</string>
+    <string name="to_do_app">TO-DO APP</string>
+</resources>
